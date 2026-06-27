@@ -278,7 +278,8 @@ def _speak_one(
         )
 
     lane = _lane_for(name)
-    response = ag.call_llm(agent["personality"], user_prompt, max_tokens=speak_tokens,
+    response = ag.call_llm(agent["personality"], user_prompt,
+                           max_tokens=min(speak_tokens, 300),
                            temperature=agent.get("temperature", 0.8),
                            enable_thinking=speak_thinking and lane != "vision",
                            lane=lane)
