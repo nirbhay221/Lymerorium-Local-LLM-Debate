@@ -218,3 +218,9 @@ bench/
     evalcard_20260626_111506.json   Run 6 results (n=50)
 ```
 
+---
+
+## License
+
+Released under the MIT License. See [LICENSE](LICENSE) for details.
+
